@@ -7,7 +7,7 @@ $.ajaxPrefilter(function (options) {
             Authorization: localStorage.token || ''
         }
         options.complete = function (response) {
-            console.log(response);
+            // console.log(response);
             const { status, message } = response.responseJSON
             if (status === 1 && message === '身份验证失败！') {
 
